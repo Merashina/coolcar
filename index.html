@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoolCar</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-top">
+      <div class="logo">
+        <div class="logo-icon"></div>
+        <div class="logo-text">CoolCar</div>
+      </div>
+
+      <nav class="nav">
+        <a href="#home">Главная</a>
+        <a href="#about">О товаре</a>
+        <a href="#gallery">Фото</a>
+        <a href="#order">Заказ</a>
+      </nav>
+
+      <div class="contact">
+        номер телефона<br>
+        адрес электронной почты
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div class="hero-image">
+          <img src="images\image1.png" alt="Фото 1">
+        </div>
+
+        <div class="hero-text">
+          <h1>ВАЗ-2107 — легенда на дороге</h1>
+          <p>
+            «Семёрка» — это не просто машина, это легенда, проверенная временем,
+            дорогами и здравым смыслом. Вот почему ВАЗ-2107 — это лучший выбор
+            для тех, кто ценит характер, стиль и настоящую автомобильную классику.
+          </p>
+          <a href="#order" class="btn">Оформить заказ</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container">
+        <h2>О товаре</h2>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              «Зачем тебе бездушный пластик, когда есть стиль с характером?»
+              ВАЗ-2107 — это не про комфорт, это про свободу. Это машина,
+              которая не спрашивает твоего мнения, а везёт тебя туда,
+              где начинается жизнь.
+            </p>
+
+            <p>
+              Плюсы:
+              <br>• Минимализм: всё на месте и ничего лишнего.
+              <br>• Надёжность: простая конструкция и понятный ремонт.
+              <br>• Стиль: квадратный дизайн, который узнаётся сразу.
+              <br>• Атмосфера: это не просто автомобиль, это эпоха.
+            </p>
+
+            <p>
+              Это не про удобство, это про характер. Это твой путь от новичка до мастера.
+              Твоя первая. Твоя легендарная. Семёрка.
+            </p>
+          </div>
+
+          <div class="about-images">
+            <div class="about-small">
+              <img src="images\image2.png" alt="Фото 2">
+            </div>
+            <div class="about-small">
+              <img src="images\image3.png" alt="Фото 3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <h2>Фотогалерея</h2>
+
+        <div class="gallery-grid">
+          <div class="gallery-thumbs">
+            <div class="thumb"><img src="images\image0.png" alt="Фото 4"></div>
+            <div class="thumb"><img src="images\image5.png" alt="Фото 5"></div>
+            <div class="thumb"><img src="images\image6.png" alt="Фото 6"></div>
+            <div class="thumb"><img src="images\image8.png" alt="Фото 7"></div>
+          </div>
+
+          <div class="gallery-main">
+            <img id="galleryMainImage" src="images\image4.png" alt="Большое фото">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order" id="order">
+      <div class="container order-grid">
+        <div class="order-form-box">
+          <h2>Форма заказа</h2>
+
+          <form class="order-form">
+            <input type="text" placeholder="ФИО" />
+            <input type="email" placeholder="Почта" />
+            <select>
+              <option selected disabled>Способ оплаты</option>
+              <option>Наличные</option>
+              <option>Карта</option>
+              <option>Перевод</option>
+            </select>
+            <button type="submit">Отправить заявку</button>
+          </form>
+        </div>
+
+        <div class="faq-box">
+          <h2>Часто задаваемые вопросы</h2>
+
+          <div class="faq">
+            <details>
+              <summary>Где можно оформить страховку?</summary>
+              <p>У наших партнёров ОСАГО и в ближайших страховых компаниях.</p>
+            </details>
+
+            <details>
+              <summary>Что насчёт гарантии?</summary>
+              <p>Гарантия действует на протяжении 3 лет, если вы не меняли детали сами.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>© Все права защищены. Политика конфиденциальности</div>
+      <div>г. Абакан, Торосова 76</div>
+      <div>8-923-322-44-53</div>
+    </div>
+  </footer>
+
+  <script>
+    const galleryMainImage = document.getElementById("galleryMainImage");
+    const thumbs = document.querySelectorAll(".thumb img");
+
+    thumbs.forEach((img) => {
+      img.addEventListener("click", () => {
+        const currentSrc = galleryMainImage.src;
+        const currentAlt = galleryMainImage.alt;
+
+        galleryMainImage.src = img.src;
+        galleryMainImage.alt = img.alt;
+
+        img.src = currentSrc;
+        img.alt = currentAlt;
+      });
+    });
+  </script>
+
+</body>
+</html>

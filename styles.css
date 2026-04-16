@@ -26,8 +26,6 @@ img {
   width: min(1200px, 92%);
   margin: 0 auto;
 }
-
-/* HEADER */
 .header {
   width: 100%;
   background: linear-gradient(90deg, #b44b24, #cf7144, #efc8c8);
@@ -102,8 +100,6 @@ img {
   font-weight: bold;
   text-align: right;
 }
-
-/* HERO */
 .hero {
   min-height: 88vh;
   display: flex;
@@ -158,8 +154,6 @@ img {
 .btn:hover {
   background: #b9461d;
 }
-
-/* ABOUT */
 .about {
   background: #6670b3;
   padding: 80px 0;
@@ -200,8 +194,6 @@ img {
   border: 3px solid #ff7130;
   background: #bbb;
 }
-
-/* GALLERY */
 .gallery {
   background: #82aebb;
   padding: 80px 0;
